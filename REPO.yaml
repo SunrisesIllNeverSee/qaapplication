@@ -1,0 +1,39 @@
+standard:
+  name: ello-repo-standard
+  version: "1.0.0"
+  mode: migrate
+
+repo:
+  name: qaapplication
+  type: group
+  lifecycle: active
+  repo_id: qaapplication
+  family: moses
+  purpose: QAApplication — application processing pipeline for Application Hub. Sequential numbered-lane workspace: inbox, processing, programs, applications, questions, answers, apply, submitted.
+
+structure:
+  profile: group
+  allowed_root_dirs_extra: [01-inbox, 02-processing, 03-programs, 04-applications, 05-questions, 06-answers, 07-apply, 08-submitted, snapshots, src, system-devin]
+  allowed_root_files_extra: [_product.md, audit-log.md, tracker.md]
+  document_roots: [docs, 01-inbox, 02-processing, 03-programs, 04-applications, 05-questions, 06-answers, 07-apply, 08-submitted]
+  artifact_roots: [artifacts, snapshots]
+  archive_roots: [archive, 08-submitted]
+
+naming:
+  forbid_version_suffixes: true
+  forbidden_suffixes: [_final, _final2, _new, _updated, _revised, _copy]
+
+knowledge:
+  okf_enabled: true
+  okf_roots: [docs, .coord]
+  okf_severity: warn
+
+coordination:
+  micro_enabled: true
+  micro_root: .coord/micro
+  macro_enabled: true
+  macro_root: .coord/macro
+
+github:
+  ruleset_profile: solo-fast
+  required_check: repo-standard
