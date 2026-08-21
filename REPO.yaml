@@ -9,7 +9,7 @@ repo:
   lifecycle: active
   repo_id: qaapplication
   family: moses
-  purpose: QAApplication — application processing pipeline for Application Hub. Sequential numbered-lane workspace: inbox, processing, programs, applications, questions, answers, apply, submitted.
+  purpose: 'QAApplication — application processing pipeline for Application Hub. Sequential numbered-lane workspace: inbox, processing, programs, applications, questions, answers, apply, submitted.'
 
 structure:
   profile: group
