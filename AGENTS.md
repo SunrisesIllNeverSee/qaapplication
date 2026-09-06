@@ -112,3 +112,16 @@ state into stickypads:
 python3 ~/Developer/_control/stickypads/scripts/reconcile_coord.py \
     --repo-path . --dry-run
 ```
+
+
+## Filesystem MCP — SUGGESTED for file operations
+
+The Filesystem MCP is available for structured file operations across the
+estate. When working with multiple files or exploring directory structure,
+consider using:
+
+- `list_directory` / `directory_tree` — structured directory traversal
+- `search_files` — glob-pattern file search
+- `read_multiple_files` — batch file reads
+
+Allowed paths: ~/Developer, ~/.config/devin, ~/.config/sigrank, ~/Desktop
